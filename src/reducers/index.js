@@ -1,7 +1,9 @@
-const initial_state = [];
+function reducer (state, action) {
+    switch (action.type) {
 
-function reducer (action, state = initial_state) {
-    return state;
+        default:
+            return state; // Returning the new state
+    }
 }
 
 export default reducer;

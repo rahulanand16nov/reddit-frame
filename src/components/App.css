@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500,600,700');
 
 .app {
-    font-family: 'IBM Plex', 'PT Sans', sans-serif;
+    background-color: black;
+    font-family: 'IBMPlexSans', 'PT Sans', sans-serif;
 }

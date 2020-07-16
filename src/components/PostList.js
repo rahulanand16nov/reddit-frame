@@ -3,15 +3,13 @@ import './PostList.css';
 import Post from './Post'
 
 function PostList(props) {
-    if(props.posts){
-        return (
-            props.posts.map( post => (
-                <li className='postlist_item'>
-                    <Post {...post}/>
-                </li>
-            ))
-        );
-    }
+    return (
+        props.posts.map( post => (
+            <li className='postlist_item'>
+                <Post {...post}/>
+            </li>
+        ))
+    );
 }
 
 export default PostList;

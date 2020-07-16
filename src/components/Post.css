@@ -1,15 +1,27 @@
+a {
+    color: inherit;
+}
+
 .post {
     display: flex;
-    height: 76px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #343536;
+    background: #262627;
 }
 
 .vote {
-    display: flex;
+    display: inherit;
     flex-direction: column;
+    box-sizing: border-box;
+    color: #D7DADC;
     align-items: center;
-    width: 30px;
-    padding: 4px;
-    background-color: #f0f0f0;
+    width: 40px;
+    border-left: 4px solid transparent;
+    padding: 8px 4px 8px 0;
+    background-color: rgba(26,26,27,0.8);
 }
 
 .vote_score {
@@ -19,34 +31,80 @@
     text-align: center;
 }
 
-.vote_button {
+.vote_btn {
     height: 22px;
     width: 22px;
+    border: 0;
+    color: #818384;
+    padding: initial;
+    background: transparent;
+    cursor: pointer;
+}
+
+.vote_btn:hover {
+    background: #262627;
+}
+
+.vote_up_btn:hover {
+    color: #ff6a32;
+}
+
+.vote_up_btn:active {
+    color: #ff4500;
+}
+
+.vote_down_btn:hover {
+    color: #8da8ff;
+}
+
+.vote_down_btn:active {
+    color: #7193FF;
+}
+
+.post {
+    display: flex;
+    font: 12px;
 }
 
 .post_content {
-    display: flex;
+    display: inherit;
     flex-direction: column;
     justify-content: space-between;
     padding: 8px;
-    font-size: 13px;
+}
+
+.post_header {
+    display: inherit;
+    color: #818384;
+    font-size: 12px;
+    padding: 8px;
+}
+
+.post_subreddit {
+    color: #D7DADC;
+    font-weight: 700;
+    margin-right: 6px;
 }
 
 .post_title {
     display: block;
-    margin-bottom: 2px;
-    font-size: 16px;
-    font-weight: 700;
+    padding: 2px;
+    color: rgb(215, 218, 220);
+    font-size: 18px;
+    font-weight: 500;
     text-decoration: none;
 }
 
-.post_url {
-    color: #6f6f6f;
+.post_footer {
+    display: inline-block;
+    text-transform: capitalize;
+    vertical-align: middle;
     font-size: 12px;
+    cursor: pointer;
+    font-weight: 700;
+    color: #818384;
 }
 
-.post_detail {
-    color: #6f6f6f;
-    font-size: 12px;
-    font-weight: 500;
+.post_foot_item {
+    margin-left: 4px;
 }
