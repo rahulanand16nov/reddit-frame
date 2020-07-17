@@ -9,9 +9,8 @@ function PostMedia(props) {
                 <img alt="Post"className="post_image" src={`${process.env.PUBLIC_URL}/images/${props.url}.jpg`}></img>
             </div>
         );
-    } else {
-        return null;
     }
+    return null;
 }
 
 export default PostMedia;
