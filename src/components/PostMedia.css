@@ -1,0 +1,13 @@
+.post_image_container {
+    display: flex;
+    max-height: 512px;
+    margin: 0px auto;
+    position: relative;
+    justify-content: center;
+}
+
+.post_image {
+    display: block;
+    max-width: 100%;
+    max-height: 512px;
+}

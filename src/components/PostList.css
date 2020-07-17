@@ -1,12 +1,4 @@
 .post-list {
     list-style: none;
-    border: 1px solid #eee;
-}
-
-li {
-   list-style: none; 
-}
-
-.post-list__item:not(:first-child) {
-    border-top: 1px solid #eee;
+    padding: 0px 256px;
 }

@@ -4,11 +4,13 @@ import Post from './Post'
 
 function PostList(props) {
     return (
-        props.posts.map( post => (
+        <div className="post-list">
+            {props.posts.map( post => (
             <li className='postlist_item'>
                 <Post {...post}/>
             </li>
-        ))
+        ))}
+        </div>
     );
 }
 

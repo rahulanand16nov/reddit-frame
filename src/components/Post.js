@@ -1,5 +1,6 @@
 import React from 'react';
 import moment from 'moment';
+import PostMedia from './PostMedia';
 import { FaAngleUp, FaAngleDown, FaCommentAlt, FaShare } from 'react-icons/fa'; 
 import './Post.css';
 
@@ -8,7 +9,7 @@ function Post(props) {
         <div className="post">
             <div className="vote">
                 <button className="vote_btn"> <FaAngleUp className="vote_up_btn"/> </button>
-                <div className="vote_score">{props.data.ups}</div>
+                    <div className="vote_score">{formatCount(props.data.ups)}</div>
                 <button className="vote_btn vote_down_btn"> <FaAngleDown/> </button>
             </div>
             <div className="post_content">
@@ -22,19 +23,23 @@ function Post(props) {
                         <span> {moment(moment.unix(props.data.created_utc).toDate()).fromNow()}</span>
                     </div>
                 </div>
-                <div className="post_link">
-                    <a className="post_title" href={props.url}>{props.data.title}</a>
-                    <div className="post_url">{props.url}</div>
-                </div>
+                <a className="post_title" href={props.url}>{props.data.title}</a>
+                <PostMedia type={props.data.Media_type} url={props.data.name} />
                 <div className="post_footer">
-                    <FaCommentAlt className="post_foot_item" />
-                    <span className="post_foot_item">{props.data.num_comments} comments</span>
+                    <div className="post_comments">
+                        <FaCommentAlt className="post_foot_item" />
+                        <span className="post_foot_item">{formatCount(props.data.num_comments)} comments</span>
+                    </div>
                     <FaShare className="post_foot_item"/>
                     <span className="post_foot_item">Share</span>
                 </div>
             </div>
         </div>
     )
+}
+
+function formatCount(num) {
+    return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num);
 }
 
 export default Post;
