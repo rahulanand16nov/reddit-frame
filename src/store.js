@@ -3,7 +3,7 @@ import reducer from './reducers';
 import postData from './postData.json';
 
 const initialState = 
-{   posts: postData,
-    current_subreddit: "popular"
+{   posts: postData.Posts,
+    current_subreddit: "Mixed"
 };
 export default createStore(reducer, initialState);

@@ -68,6 +68,7 @@ a {
 
 .post_content {
     display: inherit;
+    flex-grow: 1;
     flex-direction: column;
     justify-content: space-between;
     padding: 8px;
